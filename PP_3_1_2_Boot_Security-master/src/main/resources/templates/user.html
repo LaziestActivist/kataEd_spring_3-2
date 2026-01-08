@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users List</title>
+</head>
+<body>
+<h2>Your data</h2>
+
+<div th:text="${user.username}"></div>
+<div th:each="role : ${user.roles}">
+    <span th:text="${role.name}"></span>
+</div>
+
+</br>
+</br>
+</br>
+
+<a th:href="@{/logout}">Log out</a>
+
+</body>
+</html>
